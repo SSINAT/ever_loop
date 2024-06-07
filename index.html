@@ -1,0 +1,382 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Screenshot 2024-05-19 222500.png">
+    <title>EverLoop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script> -->
+    <link rel="stylesheet" href="app.css">
+</head>
+<body >
+  <div class="body">
+      <div class="lightDarkMode-div">
+        <button class="lightDarkMode" id="lightDarkModeBtn">Light Mode</button>
+      </div>    
+      <div class="title">
+        <div class="d-flex flex-row justify-content-center">
+          <h1 class="text-center fw-bold me-4 pt-5 pb fs title-text">EVERLOOP</h1>
+          <h1 class="text-center fw-bold pt-5 pb fs title-text2">BOARD</h1>
+        </div>
+        <hr class="border border-0 line-size bg-red tw">
+      </div>
+        <nav class="navbar navbar-expand-lg mt-3 fixedtop">
+            <div class="container-fluid">
+              <button class="navbar-toggler" id="menuSetting" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <a class="navbar-brand fw-bold d-lg-none setting-a" href="#">Settings</a>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 10H28C29.104 10 30 9.104 30 8C30 6.896 29.104 6 28 6H4C2.896 6 2 6.896 2 8C2 9.104 2.896 10 4 10ZM28 14H4C2.896 14 2 14.896 2 16C2 17.104 2.896 18 4 18H28C29.104 18 30 17.104 30 16C30 14.896 29.104 14 28 14ZM28 22H4C2.896 22 2 22.896 2 24C2 25.104 2.896 26 4 26H28C29.104 26 30 25.104 30 24C30 22.896 29.104 22 28 22Z" fill="#FF1010"/>
+                </svg>                    
+              </button>
+<!-- Settings button -->
+              <div class="offcanvas offcanvas-end offcanvas-box" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header d-flex justify-content-between light border-setting1">
+                  <h5 class="offcanvas-title d-lg-none setting-h5" id="offcanvasNavbarLabel">Settings</h5>
+                  <button id="closeButton" type="button" class="OffCanvas-btn border-0 d-lg-none closeButtonBtn" data-bs-dismiss="offcanvas" aria-label="Close">  
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.5078 15.122L11.3859 9.0001L17.5078 2.87822C18.1688 2.21729 18.1688 1.15322 17.5078 0.492285C16.8469 -0.168652 15.7828 -0.168652 15.1219 0.492285L9.00001 6.61416L2.87813 0.492285C2.21719 -0.168652 1.15313 -0.168652 0.492194 0.492285C-0.168744 1.15322 -0.168744 2.21729 0.492194 2.87822L6.61407 9.0001L0.492194 15.122C-0.168744 15.7829 -0.168744 16.847 0.492194 17.5079C1.15313 18.1688 2.21719 18.1688 2.87813 17.5079L9.00001 11.386L15.1219 17.5079C15.7828 18.1688 16.8469 18.1688 17.5078 17.5079C18.1641 16.847 18.1641 15.7782 17.5078 15.122Z" fill="#FF0000"/>
+                    </svg>
+                  </button>
+                </div>
+                <div class="offcanvas-body light border-setting2">
+                  <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+
+<!-- Available tools button -->
+                    <div class="setting-btn availableToolbtn">
+                      <li class="nav-item">
+                        <div class="setting-div ms-lg-3">
+                              <label id="addcolorBtn" class="color-width w-100" for="addcolor">
+                                  <span id="removecolorBtnRadius" class="setting-span text-black d-flex flex-row justify-content-between bottom-radius offcanvas-box-shadow">
+                                      <div class="fw-medium">Available tools</div>
+                                      <div class="">
+                                          <svg class="mt-2" id="addcolorToggleSvg" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.97034 1.12359C7.36947 0.570535 8.19297 0.570536 8.5921 1.12359L15.2975 10.4148C15.7747 11.0762 15.3022 12 14.4866 12L1.07587 12C0.260267 12 -0.212309 11.0762 0.26499 10.4148L6.97034 1.12359Z" fill="#FF0000"/>
+                                          </svg>       
+                                      </div>
+                                   </span>
+  
+                              </label>
+                          
+                              <input type="checkbox" id="addcolor">
+                              <ul class="setting-slide">
+                                <li><hr><a class="text-black" href="#">Add Text</a></li>
+                                <li><hr><a class="text-black" href="#">Add Text Color</a></li>
+                                <li><hr><a class="text-black" href="#">Animation</a></li>
+                                  <li><hr><a class="text-black" href="#">Change Front</a></li>
+                                  <li><hr><a class="text-black" href="#">Change Font Size</a></li>
+                                  <li><hr><a class="text-black" href="#">Looping Direction</a></li>
+                                  <li><hr><a class="text-black" href="#">Looping Duration</a></li>
+                                  <li><hr><a class="text-black" href="#">Spacing</a></li>
+                                  <li><hr><a class="text-black" href="#">Speed</a></li>
+                                  <li><hr><a class="text-black" href="#">Reset</a></li>
+                                  <li><hr><a class="text-black" href="#">Generate</a></li>
+                              </ul>
+                              <!-- <select class="setting-slide" name="color" id="color">
+                                <option value="Red">Red</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Green">Green</option>
+                                <option value="Blue">Blue</option>
+                                <option value="Violet">Violet</option>
+                                <option value="Pink">Pink</option>
+                                <option value="Orange">Orange</option>
+                                <option value="White">White</option>
+                                <option value="Grey">Grey</option>
+                              </select> -->
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Add text color button -->
+                    <div class="setting-btn RecommendedColorBtn">
+                      <li class="nav-item">
+                        <div class="setting-div ms-lg-3">
+                          <label id="pickFontBtn" for="pickFont" class="pickFont-width w-100">
+                            <span id="removeFontBtnRadius" class="setting-span text-black d-flex flex-row justify-content-between bottom-radius offcanvas-box-shadow">
+                              <div class="fw-medium">Recommended Color</div>
+                              <div class="">
+                                <svg id="PickFontToggleSvg" class="mt-2" width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M6.97034 1.12359C7.36947 0.570535 8.19297 0.570536 8.5921 1.12359L15.2975 10.4148C15.7747 11.0762 15.3022 12 14.4866 12L1.07587 12C0.260267 12 -0.212309 11.0762 0.26499 10.4148L6.97034 1.12359Z" fill="#FF0000"/>
+                                </svg>
+                                  
+                              </div>
+                            </span>
+                          </label>
+                          <input type="checkbox" id="pickFont">
+                          <ul class="setting-slide">
+                            <li><hr><a class="text-black" href="#">Red</a></li>
+                            <li><hr><a class="text-black" href="#">Yellow</a></li>
+                            <li><hr><a class="text-black" href="#">Green</a></li>
+                            <li><hr><a class="text-black" href="#">Blue</a></li>
+                            <li><hr><a class="text-black" href="#">Violet</a></li>
+                            <li><hr><a class="text-black" href="#">Pink</a></li>
+                            <li><hr><a class="text-black" href="#">Orange</a></li>
+                            <li><hr><a class="text-black" href="#">White</a></li>
+                            <li><hr><a class="text-black" href="#">Grey</a></li>
+                        </ul>
+                        </div>
+                      </li>
+                    </div>
+                      <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul> -->
+
+<!-- Input text box -->
+                    <div class="setting-btn addTextBtn">
+                      <li class="nav-item">
+                        <div class="ms-lg-3">
+                            <label for="loopText"></label>
+                            <input class="rounded-3 border-0 add-text-input p-3 offcanvas-box-shadow" type="text" id="loopText" name="loopText" placeholder="Add the text" autofocus>
+                        </div>
+                      </li>
+                    </div>
+<!-- Add Text Color  -->
+                    <div class="setting-btn">
+                      <li class="nav-item">
+                        <div class="textColor-div ms-lg-3 d-flex justify-content-evenly offcanvas-box-shadow">
+                          <label for="textColor" class="textColorLabel text-dark fw-medium">Text Color</label>
+                          <input type="color" id="textColor" class="colorPickerInput">
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Choose animation style -->
+                    <div class="setting-btn animation-btn">
+                      <li class="nav-item">
+                        <label class="animation-label" for="animation">Animation</label>
+                        <div class="animation-div">
+                          <select class="animationSelect rounded-2 offcanvas-box-shadow" name="animation" id="animation">
+                            <option value="linear">Linear</option>
+                            <option value="ease-in">Ease in</option>
+                            <option value="ease-out">Ease out</option>
+                          </select>
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Change font style -->
+                    <div class="setting-btn changeFontBtn">
+                      <li class="nav-item">
+                        <label class="changeFont-label" for="changeFont">Font Style</label>
+                        <div class="font-div">
+                          <select class="fontStyle rounded-2 offcanvas-box-shadow" name="fontStyle" id="changeFont">
+                            <option value="Monospace">Monospace</option>
+                            <option value="AlexBush">AlexBush</option>
+                            <option value="Kaushan-script">Kaushan-Script</option>
+                            <option value="Mem">Mem</option>
+                            <option value="Broke">Broke</option>
+                            <option value="Amakan">Amakan</option>
+                          </select>
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Change font size -->
+                    <div class="setting-btn changeFrontSizeBtn top-margin2">
+                      <li class="nav-item">
+                        <label class="changeFontSize-label" for="changeFontSize">Font Size(px)</label>
+                        <div>
+                          <input class="changeFontInput rounded-2 offcanvas-box-shadow border-0" type="number" min="12" max="200" step="2" value="100" name="changeFontSize" id="changeFontSize">
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Loop Direction -->
+                    <div class="setting-btn loopDirectionBtn top-margin1">
+                      <li class="nav-item">
+                        <label class="loopDirection-label" for="loopDirection">Loop Direction</label>
+                        <div>
+                          <select class="rounded-2 loopDirectionSelect offcanvas-box-shadow" name="loopDirection" id="loopDirection">
+                            <option value="rtl">Right To Left</option>
+                            <option value="ltr">Left To Right</option>
+                          </select>
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Loop Duration -->
+                    <div class="setting-btn loopDurationBtn top-margin1">
+                      <li class="nav-item">
+                        <!-- <label class="text-light" for="loopDuration">Loop Duration(s)</label> -->
+                        <label for="loopDuration" class="form-label loopDuration-label">
+                          Loop Duration:
+                          <span class="range-value" id="rangeValue">5</span>s
+                        </label>
+                        <div class="loopDuration-div">
+                          <input type="range" class="form-range loopRange" min="5" max="60" value="5" id="customRange1">
+                        </div>
+                      </li>
+                    </div>
+<!-- Letter spacing -->
+                    <div class="setting-btn letterSpaceBtn top-margin1">
+                      <li class="nav-item">
+                        <label for="letterSpacing" class="form-label letterSpacing-label">
+                          Letter Spacing:
+                          <span class="letterSp-value" id="letterSpValue">5</span>px
+                        </label>
+                        <div class="letterSpacing-div">
+                          <input type="range" class="form-range letterSpRange" min="1" max="50" value="5" id="customRange3">
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Speed chanage -->
+                    <div class="setting-btn speedBtn top-margin1">
+                      <li class="nav-item">
+                        <label for="speedUp" class="form-label speedUp-label">Speed</label>
+                        <div class="speedUp-div">
+                          <input type="range" class="form-range speedRange" min="1" max="10" value="1" id="customRange4">
+                        </div>
+                      </li>
+                    </div>
+
+<!-- Reset and Generate Button  -->
+                    <div class="d-flex flex-row justify-content-start RGbtn top-margin3">
+                      <div class="setting-btn resetBtn">
+                        <li class="nav-item">
+                          <button class="btn-red text-light" id="reset-btn">Reset</button>
+                        </li>
+                      </div>
+                      <div class="setting-btn generateBtn">
+                        <li class="nav-item">
+                          <button class="btn-red text-light" id="generate-btn">Generate</button>
+                        </li>
+                      </div>
+                    </div>
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+          
+          <!--Images Gallery-->
+          <div class="gallery-modal" id="galleryModal">
+              <div class="modal-content">
+                  <span class="close-modal" id="closeModal">&times;</span>
+                  <!-- Images will be loaded here -->
+              </div>
+          </div>
+
+          <div class="output-div">Output</div>
+          <div class="output-box" id="imageContainer">
+            <div class="rectangle" id="rectangle">
+              <canvas class="output-content" id="OutputContent"></canvas> <!-- generate the output here-->
+              <!--Play and Pause looping animation SVG-->
+              <button class="pauseLoopingButton" id="pauseLoopingBtn">
+                <svg id="pauseLoop" class="active pauseLoopSvg" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.125 25.5352V4.45898C13.125 4.06641 12.8086 3.75 12.4102 3.75H8.21484C7.81641 3.75 7.5 4.06641 7.5 4.45898V25.5352C7.5 25.9277 7.81641 26.25 8.21484 26.25H12.4102C12.8086 26.25 13.125 25.9336 13.125 25.5352Z" fill="red"/>
+                  <path d="M21.7852 3.75H17.5898C17.1973 3.75 16.875 4.06641 16.875 4.45898V25.5352C16.875 25.9277 17.1914 26.25 17.5898 26.25H21.7852C22.1777 26.25 22.5 25.9336 22.5 25.5352V4.45898C22.5 4.06641 22.1836 3.75 21.7852 3.75Z" fill="red"/>
+                </svg>       
+                <svg id="playLoop" class="playLoopSvg" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M23.7422 13.6465L7.42969 3.9375C7.23047 3.82031 7.02539 3.75 6.79102 3.75C6.15234 3.75 5.63086 4.27734 5.63086 4.92188H5.625V25.0781H5.63086C5.63086 25.7227 6.15234 26.25 6.79102 26.25C7.03125 26.25 7.23047 26.168 7.44727 26.0508L23.7422 16.3535C24.1289 16.0313 24.375 15.5449 24.375 15C24.375 14.4551 24.1289 13.9746 23.7422 13.6465Z" fill="red"/>
+                </svg>                             
+              </button>
+              <!--Lock and unlock Screen SVG-->
+              <button id="lockScreenToggleBtn" class="lockScreenContainer">
+                <svg id="lockScreen" class="active lockScreenSvg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.40001 8.8V6.6C4.40001 4.84957 5.09536 3.17084 6.3331 1.9331C7.57084 0.695355 9.24958 0 11 0C12.7504 0 14.4292 0.695355 15.6669 1.9331C16.9047 3.17084 17.6 4.84957 17.6 6.6V8.8H18.7C19.2835 8.8 19.8431 9.03179 20.2556 9.44437C20.6682 9.85695 20.9 10.4165 20.9 11V19.8C20.9 20.3835 20.6682 20.9431 20.2556 21.3556C19.8431 21.7682 19.2835 22 18.7 22H3.30001C2.71653 22 2.15695 21.7682 1.74437 21.3556C1.33179 20.9431 1.10001 20.3835 1.10001 19.8V11C1.10001 9.79 2.09001 8.8 3.30001 8.8H4.40001ZM9.90001 16.203V18.7H12.1V16.203C12.5194 15.9609 12.8472 15.5871 13.0325 15.1396C13.2179 14.6922 13.2504 14.1961 13.125 13.7283C12.9997 13.2605 12.7235 12.8472 12.3393 12.5524C11.9551 12.2575 11.4843 12.0977 11 12.0977C10.5157 12.0977 10.0449 12.2575 9.66073 12.5524C9.27651 12.8472 9.00031 13.2605 8.87497 13.7283C8.74962 14.1961 8.78214 14.6922 8.96747 15.1396C9.1528 15.5871 9.48059 15.9609 9.90001 16.203ZM7.70001 6.6V8.8H14.3V6.6C14.3 5.72479 13.9523 4.88542 13.3335 4.26655C12.7146 3.64768 11.8752 3.3 11 3.3C10.1248 3.3 9.28542 3.64768 8.66655 4.26655C8.04768 4.88542 7.70001 5.72479 7.70001 6.6Z" fill="red"/>
+                </svg>
+                <svg id="unlockScreen" class="unlockScreenSvg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.40001 8.8V6.6C4.40001 4.84957 5.09536 3.17084 6.3331 1.9331C7.57084 0.695355 9.24958 0 11 0C12.7504 0 14.4292 0.695355 15.6669 1.9331C16.9046 3.17084 17.6 4.84957 17.6 6.6H14.3V8.8H18.7C19.2835 8.8 19.8431 9.03179 20.2556 9.44437C20.6682 9.85695 20.9 10.4165 20.9 11V19.8C20.9 20.3835 20.6682 20.9431 20.2556 21.3556C19.8431 21.7682 19.2835 22 18.7 22H3.30001C2.71653 22 2.15695 21.7682 1.74437 21.3556C1.33179 20.9431 1.10001 20.3835 1.10001 19.8V11C1.10001 9.79 2.09001 8.8 3.30001 8.8H4.40001ZM9.90001 16.203V18.7H12.1V16.203C12.5194 15.9609 12.8472 15.5871 13.0325 15.1396C13.2179 14.6922 13.2504 14.1961 13.125 13.7283C12.9997 13.2605 12.7235 12.8472 12.3393 12.5524C11.9551 12.2575 11.4843 12.0977 11 12.0977C10.5157 12.0977 10.0449 12.2575 9.66073 12.5524C9.27651 12.8472 9.00031 13.2605 8.87497 13.7283C8.74962 14.1961 8.78214 14.6922 8.96747 15.1396C9.1528 15.5871 9.48059 15.9609 9.90001 16.203ZM7.70001 6.6V8.8H14.3V6.6C14.3 5.72479 13.9523 4.88542 13.3335 4.26655C12.7146 3.64768 11.8752 3.3 11 3.3C10.1248 3.3 9.28542 3.64768 8.66655 4.26655C8.04768 4.88542 7.70001 5.72479 7.70001 6.6Z" fill="red"/>
+                </svg>
+              </button>
+              <!--Upload browswer image SVG-->
+                <button id="openGalleryButton" class="openGalleryBtn">
+                  <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.78524 29C0.79929 29 0 28.2832 0 27.3995V1.60048C0 0.716558 0.819558 0 1.78524 0H34.2148C35.2008 0 36 0.716864 36 1.60048V27.3995C36 28.2834 35.1805 29 34.2148 29H1.78524ZM32.4 19.3333V3.22222H3.6V25.7778L21.6 9.66667L32.4 19.3333ZM32.4 23.8902L21.6 14.2235L8.69117 25.7778H32.4V23.8902ZM10.8 12.8889C8.81177 12.8889 7.2 11.4463 7.2 9.66667C7.2 7.88708 8.81177 6.44444 10.8 6.44444C12.7882 6.44444 14.4 7.88708 14.4 9.66667C14.4 11.4463 12.7882 12.8889 10.8 12.8889Z" fill="black"/>
+                    </svg>                    
+                </button>
+              <!--Upload device Image SVG-->
+              <div class="uploadImgBtn-div" id="uploadImagBtn">
+                <svg id="uploadBtn" class="uploadImgBtn" width="43" height="29" viewBox="0 0 43 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_242_2)">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.0583 7.875C24.1542 3.4125 20.2792 0 15.5 0C11.7542 0 8.525 2.1 6.975 5.25C2.97083 5.775 0 9.05625 0 13.125C0 17.4562 3.4875 21 7.75 21H24.5417C28.1583 21 31 18.1125 31 14.4375C31 11.025 28.2875 8.1375 25.0583 7.875ZM18.0833 11.8125V17.0625H12.9167V11.8125H9.04167L15.5 5.25L21.9583 11.8125H18.0833Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_242_2">
+                  <rect width="31" height="21" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>    
+              </div>
+              <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+              <button id="fullScreenButton" onclick="toggleFullScreen()">
+                <!--Exit FullScreen SVG-->
+                <div class="exitFullScreen-div">
+                  <svg id="exitFullScreenIcon" class="exitFullScreen" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_244_7)">
+                    <path d="M30 11.6667H36.6667V15H26.6667V5H30V11.6667ZM13.3334 15H3.33337V11.6667H10V5H13.3334V15ZM30 28.3333V35H26.6667V25H36.6667V28.3333H30ZM13.3334 25V35H10V28.3333H3.33337V25H13.3334Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_244_7">
+                    <rect width="40" height="40" fill="white"/>
+                    </clipPath>
+                    </defs>
+                  </svg>  
+                </div>
+                <!--Enter FullScreen SVG-->
+                <div class="enterFullScreen-div">
+                  <svg id="enterFullScreenIcon" class="enterFullScreen" width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <g clip-path="url(#clip0_213_14)">
+                      <path d="M8.4 0V2.44444H2.8V7.33333H0V0H8.4ZM0 22V14.6667H2.8V19.5556H8.4V22H0ZM28 22H19.6V19.5556H25.2V14.6667H28V22ZM28 7.33333H25.2V2.44444H19.6V0H28V7.33333Z" fill="black"/>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_213_14">
+                        <rect width="34" height="34" fill="white"/>
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+    </div>
+    <div class="footer-div">
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2024 EverLoop | All Rights Reserved</p>
+      </footer>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
